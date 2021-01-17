@@ -1,5 +1,4 @@
 <?php
-
-echo "oi";
-echo "oi";
-echo "oi";
+header("Location: http://localhost/bitcurriculos/view/index.php");
+exit();
+?>
