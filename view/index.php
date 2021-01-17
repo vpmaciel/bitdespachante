@@ -16,17 +16,16 @@ require_once 'menu.php';
 
 echo $DIV_MAIN;
 
-echo $H1 . 'Bit Curriculos' . $H1_;
+echo $H1 . 'Bit Despachante' . $H1_;
 
 $MSG = retornar_contador_visitas();	
 echo $MSG;
 
-$MSG = '<p align="justify">O Bit Curriculos é um sistema para internet em recursos humanos, com foco em recrutamento on-line. Atualmente administramos a mais bem organizada base de currículos do país, 
-	oferecendo às empresas o mais completo sistema de recrutamento on-line. Cadastre seu currículo para estar disponível para diversas empresas. Cadastre sua empresa para buscar profissionais.</p>';	
+$MSG = '<p align="justify">O Bit Curriculos é um sistema para internet para serviços de depachante.</p>';	
 echo $MSG;
 
-$MSG = '<p align="justify">O nosso site oferece serviços para profissionais serem localizados em todo o Brasil para divulgar, prestar serviços ou vender seus produtos,
-			auxilía e prepara um currículo formatado, e você pode candidatar a várias vagas publicadas pelas empresas no site.</p>';	
+$MSG = '<p align="justify">A empresa Maciel Tecnologia da Informação oferece sistemas profissionais em todo o Brasil para auxiliar sua empresa 
+			no gerenciamento de informações.</p>';	
 echo $MSG;
 
 echo $DIV_;
