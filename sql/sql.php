@@ -3,11 +3,10 @@ ini_set('display_errors', TRUE);
 error_reporting(E_ALL);
 
 require_once '../lib/biblioteca.php';
+require_once 'configuracao.php';
 
-$dsn = "mysql:host=localhost;dbname=bitcurriculos";
-$usuario = "root";
-$senha = "";
 $pdo = NULL;
+
 try {
     $pdo = new PDO($dsn, $usuario, $senha);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

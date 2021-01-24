@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['usu_int_id'])) {
+if(!isset($_SESSION['usu_id'])) {
 	header('location:..\view\erro.php?e=UNL');
+	exit;
 }
 require_once '../lib/biblioteca.php';
 require_once '../model/model.php';
@@ -16,17 +17,17 @@ if(isset($_GET['acao'])){
 
 ####################################################################################################
 
-$experiencia_profissional_model['exp_prof_int_id'] = $_GET['exp_prof_int_id'];
+$experiencia_profissional_model['exp_pro_id'] = $_GET['exp_pro_id'];
 
 $resultado_numero_registros = retornar_numero_registros('experiencia_profissional', $experiencia_profissional_model);
 
-$experiencia_profissional_model['exp_prof_int_id'] = $_GET['exp_prof_int_id'];
-$experiencia_profissional_model['usu_int_id'] = $_SESSION['usu_int_id'];
-$experiencia_profissional_model['exp_prof_char_empresa'] = $_GET['exp_prof_char_empresa'];
-$experiencia_profissional_model['exp_prof_char_cargo'] = $_GET['exp_prof_char_cargo'];
-$experiencia_profissional_model['exp_prof_char_data_admissao'] = $_GET['exp_prof_char_data_admissao'];
-$experiencia_profissional_model['exp_prof_char_data_saida'] = $_GET['exp_prof_char_data_saida'];
-$experiencia_profissional_model['exp_prof_char_funcoes'] = $_GET['exp_prof_char_funcoes'];
+$experiencia_profissional_model['exp_pro_id'] = $_GET['exp_pro_id'];
+$experiencia_profissional_model['usu_id'] = $_SESSION['usu_id'];
+$experiencia_profissional_model['exp_pro_empresa'] = $_GET['exp_pro_empresa'];
+$experiencia_profissional_model['exp_pro_cargo'] = $_GET['exp_pro_cargo'];
+$experiencia_profissional_model['exp_pro_data_admissao'] = $_GET['exp_pro_data_admissao'];
+$experiencia_profissional_model['exp_pro_data_saida'] = $_GET['exp_pro_data_saida'];
+$experiencia_profissional_model['exp_pro_funcoes'] = $_GET['exp_pro_funcoes'];
 
 ####################################################################################################
 
@@ -58,8 +59,8 @@ if ($resultado_numero_registros == 0) {
 	} 
 } else {
     
-	$condicao['usu_int_id'] = $_SESSION['usu_int_id'];
-	$condicao['exp_prof_int_id'] = $_GET['exp_prof_int_id'];
+	$condicao['usu_id'] = $_SESSION['usu_id'];
+	$condicao['exp_pro_id'] = $_GET['exp_pro_id'];
 
 	
 	$resultado_atualizar = atualizar('experiencia_profissional', $experiencia_profissional_model, $condicao);

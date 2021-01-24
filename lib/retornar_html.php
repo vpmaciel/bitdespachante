@@ -15,7 +15,7 @@ $BODY_ = '</body>';
 
 $DIV_ = '</div>';
 
-$DIV_MAIN = '<div class="coluna direita">';
+$DIV_MAIN = '<div class="tela" align="center">';
 
 $TD = '<td>';
 
@@ -24,6 +24,10 @@ $TD_ = '</td>';
 $TR = '<tr>';
 
 $TR_ = '</tr>';
+
+$TH = '<th>';
+
+$TH_ = '</th>';
 
 $H1 = '<h1>';
 
