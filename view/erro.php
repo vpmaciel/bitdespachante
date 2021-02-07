@@ -13,15 +13,15 @@ echo $DIV_MAIN;
 
 require_once 'menu.php';
 
-echo $TABLE;
-echo $TR . $TH . 'Erro' . $TH_ . $TR_;
-echo $TR . $TD . '<p class="erro">' . $array_erro[$_GET['e']]. '</p>'  . $TD_ . $TR_;
+echo $H1 . 'Erro' . $H1_;
+echo '<span class="erro">' . $array_erro[$_GET['e']]. '</span>';
 
 if (isset($_GET['msg'])) {
-    echo $TR . $TD . '<p class="erro">' . $_GET['msg']. '</p>'  . $TD_ . $TR_;
+    echo '<br><br><span class="erro">' . $_GET['msg']. '</span>';
 }
 
-echo $TABLE_;
+$MSG = '<script>setTimeout(function() { window.history.back(); }, 5000);</script>';
+echo $MSG;
 
 echo $DIV_;
 

@@ -14,16 +14,20 @@ echo $DIV_MAIN;
 
 require_once 'menu.php';
 
-echo $TABLE;
-echo $TR . $TH . 'Sucesso'  . $TH_ . $TR_; 
 
-echo $TR . $TD . '<p class="sucesso">' . 'Operação realizada com sucesso !'. '</p>'  . $TD_ . $TR_;
+echo $H1 . 'Sucesso'  . $H1_; 
+
+echo '<span class="sucesso">' . 'Operação realizada com sucesso !'. '</span>';
 
 if (isset($_GET['msg'])) {
-    echo $TR . $TD . '<p class="sucesso">' . $_GET['msg']. '</p>'  . $TD_ . $TR_;
+    echo '<br><br><span class="sucesso">' . $_GET['msg']. '</span>';
 }
 
-echo $TABLE_;
+$url = isset($_GET['url_voltar']) ? $_GET['url_voltar'] : '';
+
+if (isset($_GET['url_voltar'])) {
+    header( "refresh:5;url= $url.php" );
+}
 
 echo $DIV_;
 

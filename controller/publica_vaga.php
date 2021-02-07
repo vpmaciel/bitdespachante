@@ -24,7 +24,7 @@ $resultado_numero_registros = retornar_numero_registros('publica_vaga', $publica
 $publica_vaga_model['pub_vag_id'] = $_GET['pub_vag_id'];
 $publica_vaga_model['usu_id'] = $_SESSION['usu_id'];
 $publica_vaga_model['pub_vag_empresa'] = $_GET['pub_vag_empresa'];
-$publica_vaga_model['pub_vag_cargo'] = remover_acentos($_GET['pub_vag_cargo']);
+$publica_vaga_model['pub_vag_cargo'] = mb_convert_case(mb_strtolower(remover_acentos($_GET['pub_vag_cargo']), 'UTF-8'),  MB_CASE_TITLE);
 $publica_vaga_model['pub_vag_requisitos'] = $_GET['pub_vag_requisitos'];
 $publica_vaga_model['pub_vag_funcoes'] = $_GET['pub_vag_funcoes'];
 $publica_vaga_model['pub_vag_beneficios'] = $_GET['pub_vag_beneficios'];
@@ -46,7 +46,7 @@ if ($acao == 'excluir') {
 
 	if ($resultado_excluir == TRUE) {
 		
-		header('location:..\view\sucesso.php');
+		header('location:..\view\sucesso.php?url_voltar=publica_vaga_lista');
 		exit;
 	} else {
 		header('location: ..\view\erro.php?e=OPN');
@@ -58,7 +58,7 @@ if ($resultado_numero_registros == 0) {
     $resultado_inserir = inserir('publica_vaga', $publica_vaga_model);
     
     if ($resultado_inserir == TRUE) {
-		header('location:..\view\sucesso.php');
+		header('location:..\view\sucesso.php?url_voltar=publica_vaga_lista');
 		exit;
 	} else {
 		header('location: ..\view\erro.php?e=OPN');
@@ -74,7 +74,7 @@ if ($resultado_numero_registros == 0) {
 	
 	if ($resultado_atualizar == TRUE) {
 		
-		header('location:..\view\sucesso.php');
+		header('location:..\view\sucesso.php?url_voltar=publica_vaga_lista');
 		exit;
 	} else {
 		header('location: ..\view\erro.php?e=OPN');

@@ -29,9 +29,15 @@ select, input, textarea, select:focus, input:focus, textarea:focus {
 	width: 100%;
 	resize: none;
 }
-input[type="submit"] {
+.botao, input[type="button"], input[type="submit"] {
+	border-radius: 0px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid#000;	
+	font-size: 1em;			
+	resize: none;
 	padding: 5px;	 
-	 width: auto;
+	width: 100px;
 }
 label {
 	color: #C29375;			
@@ -103,7 +109,7 @@ div {
 	display: inline-block;
 }
 .topnav {
-	padding: 0px;
+	padding: 5px 5px 5px 5px;
 	overflow: hidden;
 	background-color: #70221D;
 	width: 100%;	
@@ -121,9 +127,7 @@ div {
 .topnav a:hover {
 	text-decoration: underline;	
 } 
-#div { 
-	width: 250px; 
-	background-color: #000;
-	border: 1px white s;
+.menu { 
+	width: 200px;	
 	padding: 0px;
 }
