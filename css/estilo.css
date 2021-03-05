@@ -106,7 +106,7 @@ body {
 }
 div {    
 	padding: 0px;
-	display: inline-block;
+	display: inline-block;	
 }
 .topnav {
 	padding: 5px 5px 5px 5px;
@@ -129,5 +129,5 @@ div {
 } 
 .menu { 
 	width: 200px;	
-	padding: 0px;
+	padding: 0px;	
 }
