@@ -16,9 +16,9 @@ if ($resultado_retornar_numero_registros == 0) {
 } else {	
 
 	if (!isset($_SESSION['usu_id'])) {
-		$curso_json = json_decode(selecionar('usuario', $usuario_model));
+		$usuario_json = json_decode(selecionar('usuario', $usuario_model));
 
-		foreach($curso_json as $registro) {
+		foreach($usuario_json as $registro) {
 			$_SESSION['usu_id'] = $registro->usu_id;						
 		}
 		

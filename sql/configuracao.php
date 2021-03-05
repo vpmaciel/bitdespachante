@@ -1,4 +1,4 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=bitcurriculos";
+$dsn = "mysql:host=localhost;dbname=bitdespachante";
 $usuario = "root";
 $senha = "";
