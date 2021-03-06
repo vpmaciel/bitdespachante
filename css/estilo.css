@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;	
 	padding: 0px;
 }
-select, input, textarea, select:focus, input:focus, textarea:focus {
+select, input, textare, button, select:focus, input:focus, textarea:focus {
     border-radius: 0px;
     outline: none;
     box-shadow: none;
