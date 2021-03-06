@@ -127,6 +127,11 @@ div {
 	text-decoration: underline;	
 } 
 .menu { 
-	width: 300px;	
+	width: 100%;
 	padding: 0px;		
+	background-color: #70221D;
+}
+.menu select{ 	
+	background-color: #70221D;
+	width: 500px;
 }
