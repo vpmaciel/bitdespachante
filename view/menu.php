@@ -1,6 +1,7 @@
 <?php
+echo 'BitDespachante<br><br>';
 echo '<div class="dropdown">';
-echo '<button class="dropbtn">Dropdown</button>';
+echo '<button class="dropbtn">Menu</button>';
 echo '<div class="dropdown-content">';
 echo '<a href="index.php">Home</a>';
 echo '<a href="registro.php">Registrar</a>';
@@ -38,3 +39,4 @@ echo '<a href="../view/curriculo.php">Veículos - Pedido de Placas</a>';
 echo '<a href="../view/curriculo.php">Veículos - Seguro</a>';
 echo '</div>';
 echo '</div>';
+echo '<br><br>';
